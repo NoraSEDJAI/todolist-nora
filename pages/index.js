@@ -108,6 +108,21 @@ const Home = () => {
         </svg>
       </nav>
 
+      <div>
+        <div className="flex">
+            {console.log(todo)}
+            {todoLists.map((item) => (
+              
+              <button
+                className="flex justify-between border p-2 border-solid border-transparent border-b-gray-300 gap-2"
+                id={startId + `${+item.id}`}
+                key={item.id}
+                onClick={() => newId(item.id)}
+              >{item.name}</button>
+              
+            ))}
+          </div></div>
+
       <ul class="flex justify-between border p-2 border-solid border-transparent border-b-gray-300 gap-2">
         <li class="font-medium">Task </li>
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
